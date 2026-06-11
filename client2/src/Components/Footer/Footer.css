@@ -1,0 +1,124 @@
+/* Footer Container */
+.footer {
+    background: #ffffff;
+    padding: 60px 8% 30px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(241, 245, 249, 1);
+}
+
+/* Footer Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.footer-logo img {
+    width: 46px;
+    height: auto;
+}
+
+.footer-logo p {
+    font-size: 26px;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    margin: 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+    font-family: var(--font-body);
+}
+
+.footer-links li:hover a {
+    color: var(--primary-color);
+}
+
+/* Social Media Icons */
+.footer-social-icon {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.footer-icons-container {
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.footer-icons-container img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+.footer-icons-container:hover {
+    background: var(--primary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    border-color: var(--primary-color);
+}
+
+.footer-icons-container:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Footer Copyright */
+.footer-copyright {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+}
+
+.footer-copyright hr {
+    width: 100%;
+    height: 1px;
+    background: rgba(226, 232, 240, 0.8);
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 20px 25px 20px;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    .footer-social-icon {
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,171 @@
+.company-page {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding-bottom: 80px;
+}
+
+.company-hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.company-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+    letter-spacing: -1px;
+}
+
+.company-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.company-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px 0 20px;
+}
+
+.company-section {
+    margin-bottom: 80px;
+}
+
+.company-section h2, .company-team h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: var(--font-heading);
+}
+
+/* Timeline Layout */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    border-left: 2px solid rgba(226, 232, 240, 1);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+    padding-left: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.time-badge {
+    position: absolute;
+    left: -42px;
+    top: 0;
+    background: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    width: 42px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+}
+
+.time-content {
+    background: white;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.005);
+}
+
+.time-content h4 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin: 0 0 8px 0;
+    font-family: var(--font-heading);
+}
+
+.time-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Team Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team-member {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.01);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+}
+
+.team-member h4 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin: 0 0 4px 0;
+    font-family: var(--font-heading);
+}
+
+.team-member .role {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.team-member .bio {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

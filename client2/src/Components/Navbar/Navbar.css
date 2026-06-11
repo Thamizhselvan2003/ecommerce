@@ -1,0 +1,221 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    height: 76px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    position: sticky;
+    top: 15px;
+    margin: 10px 4% 0 4%;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtly scale navbar down or modify shadows when scrolling (if class is added, else base state remains ultra clean) */
+.navbar:hover {
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    border-color: rgba(99, 102, 241, 0.1);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.03);
+}
+
+.nav-logo img {
+    height: 38px;
+    width: auto;
+}
+
+.nav-logo p {
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.8px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 99px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-menu li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: var(--font-body);
+}
+
+.nav-menu li:hover {
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.nav-menu li:hover a {
+    color: var(--primary-color);
+}
+
+/* Styled as an elegant glowing indicator dot instead of a blocky underline */
+.nav-menu hr {
+    border: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.8);
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+}
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-login-cart a {
+    text-decoration: none;
+}
+
+.nav-login-cart button {
+    height: 40px;
+    padding: 0 20px;
+    outline: none;
+    border: 1.5px solid rgba(15, 23, 42, 0.08);
+    border-radius: 99px;
+    color: var(--text-dark);
+    font-size: 13.5px;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: var(--font-body);
+}
+
+.nav-login-cart button:hover {
+    background: rgba(15, 23, 42, 0.03);
+    border-color: rgba(15, 23, 42, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Highlighting the Signup button as the primary visual action */
+.nav-login-cart a:nth-child(2) button {
+    background: var(--text-dark);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.nav-login-cart a:nth-child(2) button:hover {
+    background: #1e293b; /* Slate 800 */
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    transform: translateY(-2px);
+}
+.nav-cart-icon {
+    font-size: 24px;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, opacity 0.2s ease;
+    opacity: 0.75;
+    margin-left: 5px;
+}
+
+.nav-cart-icon:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.nav-cart-count {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -26px;
+    margin-left: -32px;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #db2777 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(236, 72, 153, 0.4);
+    pointer-events: none;
+}
+
+/* Adjustments for smaller screen widths */
+@media (max-width: 1024px) {
+    .navbar {
+        margin: 10px 20px 0 20px;
+        padding: 0 4%;
+    }
+    .nav-menu {
+        gap: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 20px;
+        top: 10px;
+        margin: 10px 10px 0 10px;
+    }
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        gap: 0;
+    }
+    .nav-menu li {
+        padding: 6px 12px;
+    }
+    .nav-login-cart {
+        width: 100%;
+        justify-content: center;
+    }
+}
