@@ -59,7 +59,7 @@ const SignUp = () =>   {
     e.preventDefault();
     if (validateForm()) {
       try {
-        await axios.post('http://localhost:5000/signup', formData);
+        await axios.post(`${process.env.REACT_APP_API_URL}/signup`, formData);
         alert("Signup Successful!");
         setFormData({ name: "", email: "", password: "", confirmPassword: "" });
         setErrors({});

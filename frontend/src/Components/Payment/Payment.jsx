@@ -25,7 +25,7 @@ const CheckoutForm = ({ initialAmount }) => {
             return;
         }
 
-        const response = await fetch("http://localhost:5000/create-payment", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/create-payment`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ amount: amount * 100, currency: "inr" }),

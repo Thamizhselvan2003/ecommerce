@@ -34,7 +34,7 @@ const LoginForm = () => {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await axios.post('http://localhost:5000/login', formData);
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, formData);
         
         // Accessing data from the response
         const { message, token } = response.data;
